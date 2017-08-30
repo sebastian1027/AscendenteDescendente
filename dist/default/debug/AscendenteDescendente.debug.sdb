@@ -1,0 +1,91 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F887 ]
+[d frameptr 6 ]
+"12 E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+[v _main main `(v  1 e 1 0 ]
+"32 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"44 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"10 E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+[v _retraso retraso `DCi  1 e 2 0 ]
+"226 C:\Program Files (x86)\Microchip\xc8\v1.43\include\pic16f887.h
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"288
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+[s S23 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"305
+[u S32 . 1 `S23 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES32  1 e 1 @7 ]
+"1476
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1538
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"12 E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+[v _main main `(v  1 e 1 0 ]
+{
+"71
+} 0
+"44 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 25 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 29 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 24 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 16 ]
+"73
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 11 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 15 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 14 ]
+[v ___ftmul@exp exp `uc  1 a 1 10 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 0 ]
+[v ___ftmul@f2 f2 `f  1 p 3 3 ]
+"157
+} 0
+"32 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+{
+"34
+[v ___awtoft@sign sign `uc  1 a 1 13 ]
+"32
+[v ___awtoft@c c `i  1 p 2 8 ]
+"42
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0
