@@ -1558,190 +1558,219 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x BOR4V=BOR40V ]
 "23
 [p x WRT=OFF ]
-"10 AscendenteDescendente.c
-[v _retraso `Ci ~T0 @X0 1 e ]
-[i _retraso
--> 5000 `i
+"12 AscendenteDescendente.c
+[v _asciende `i ~T0 @X0 1 e ]
+[i _asciende
+-> 0 `i
 ]
-[; ;AscendenteDescendente.c: 10: const int retraso = 5000;
+[; ;AscendenteDescendente.c: 12: int asciende = 0;
+"13
+[v _desciende `i ~T0 @X0 1 e ]
+[i _desciende
+-> 0 `i
+]
+[; ;AscendenteDescendente.c: 13: int desciende = 0;
+"14
+[v _estadoAnteriorIncremento `i ~T0 @X0 1 e ]
+[v _estadoAnteroriDecremento `i ~T0 @X0 1 e ]
+[; ;AscendenteDescendente.c: 14: int estadoAnteriorIncremento, estadoAnteroriDecremento;
 [v $root$_main `(v ~T0 @X0 0 e ]
-"12
+"16
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;AscendenteDescendente.c: 12: void main(void) {
+[; ;AscendenteDescendente.c: 16: void main(void) {
 [e :U _main ]
 [f ]
-[; ;AscendenteDescendente.c: 14: TRISB = 0;
-"14
-[e = _TRISB -> -> 0 `i `uc ]
-[; ;AscendenteDescendente.c: 15: PORTB = 0;
-"15
-[e = _PORTB -> -> 0 `i `uc ]
-[; ;AscendenteDescendente.c: 16: TRISC = 1;
-"16
-[e = _TRISC -> -> 1 `i `uc ]
-[; ;AscendenteDescendente.c: 17: PORTC = 0;
-"17
-[e = _PORTC -> -> 0 `i `uc ]
-[; ;AscendenteDescendente.c: 18: while (1) {
+[; ;AscendenteDescendente.c: 18: TRISB = 0;
 "18
+[e = _TRISB -> -> 0 `i `uc ]
+[; ;AscendenteDescendente.c: 19: PORTB = 0;
+"19
+[e = _PORTB -> -> 0 `i `uc ]
+[; ;AscendenteDescendente.c: 20: TRISC = 1;
+"20
+[e = _TRISC -> -> 1 `i `uc ]
+[; ;AscendenteDescendente.c: 21: PORTC = 0;
+"21
+[e = _PORTC -> -> 0 `i `uc ]
+[; ;AscendenteDescendente.c: 22: while (1) {
+"22
 [e :U 141 ]
 {
-[; ;AscendenteDescendente.c: 20: if (PORTCbits.RC1 == 0 && PORTCbits.RC2 ==0){
-"20
-[e $ ! && == -> . . _PORTCbits 0 1 `i -> 0 `i == -> . . _PORTCbits 0 2 `i -> 0 `i 143  ]
-{
-[; ;AscendenteDescendente.c: 21: PORTB = 0x00;
-"21
-[e = _PORTB -> -> 0 `i `uc ]
-"22
-}
-[e :U 143 ]
-[; ;AscendenteDescendente.c: 22: }
 [; ;AscendenteDescendente.c: 24: if (PORTCbits.RC2 == 1){
 "24
-[e $ ! == -> . . _PORTCbits 0 2 `i -> 1 `i 144  ]
+[e $ ! == -> . . _PORTCbits 0 2 `i -> 1 `i 143  ]
 {
-[; ;AscendenteDescendente.c: 25: PORTB = 0x3F;
+[; ;AscendenteDescendente.c: 25: asciende = 1;
 "25
-[e = _PORTB -> -> 63 `i `uc ]
-[; ;AscendenteDescendente.c: 26: _delay((unsigned long)((retraso)*(4000000/4000.0)));
+[e = _asciende -> 1 `i ]
+[; ;AscendenteDescendente.c: 26: while (asciende == 1) {
 "26
-[e ( __delay (1 -> * -> _retraso `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;AscendenteDescendente.c: 27: PORTB = 0x06;
+[e $U 144  ]
+[e :U 145 ]
+{
+[; ;AscendenteDescendente.c: 27: PORTB = 0x3F;
 "27
-[e = _PORTB -> -> 6 `i `uc ]
-[; ;AscendenteDescendente.c: 28: _delay((unsigned long)((retraso)*(4000000/4000.0)));
+[e = _PORTB -> -> 63 `i `uc ]
+[; ;AscendenteDescendente.c: 28: _delay((unsigned long)((1000)*(4000000/4000.0)));
 "28
-[e ( __delay (1 -> * -> _retraso `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;AscendenteDescendente.c: 29: PORTB = 0x5B;
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;AscendenteDescendente.c: 29: PORTB = 0x06;
 "29
-[e = _PORTB -> -> 91 `i `uc ]
-[; ;AscendenteDescendente.c: 30: _delay((unsigned long)((retraso)*(4000000/4000.0)));
+[e = _PORTB -> -> 6 `i `uc ]
+[; ;AscendenteDescendente.c: 30: _delay((unsigned long)((1000)*(4000000/4000.0)));
 "30
-[e ( __delay (1 -> * -> _retraso `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;AscendenteDescendente.c: 31: PORTB = 0x4F;
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;AscendenteDescendente.c: 31: PORTB = 0x5B;
 "31
-[e = _PORTB -> -> 79 `i `uc ]
-[; ;AscendenteDescendente.c: 32: _delay((unsigned long)((retraso)*(4000000/4000.0)));
+[e = _PORTB -> -> 91 `i `uc ]
+[; ;AscendenteDescendente.c: 32: _delay((unsigned long)((1000)*(4000000/4000.0)));
 "32
-[e ( __delay (1 -> * -> _retraso `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;AscendenteDescendente.c: 33: PORTB = 0x66;
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;AscendenteDescendente.c: 33: PORTB = 0x4F;
 "33
-[e = _PORTB -> -> 102 `i `uc ]
-[; ;AscendenteDescendente.c: 34: _delay((unsigned long)((retraso)*(4000000/4000.0)));
+[e = _PORTB -> -> 79 `i `uc ]
+[; ;AscendenteDescendente.c: 34: _delay((unsigned long)((1000)*(4000000/4000.0)));
 "34
-[e ( __delay (1 -> * -> _retraso `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;AscendenteDescendente.c: 35: PORTB = 0x6D;
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;AscendenteDescendente.c: 35: PORTB = 0x66;
 "35
-[e = _PORTB -> -> 109 `i `uc ]
-[; ;AscendenteDescendente.c: 36: _delay((unsigned long)((retraso)*(4000000/4000.0)));
+[e = _PORTB -> -> 102 `i `uc ]
+[; ;AscendenteDescendente.c: 36: _delay((unsigned long)((1000)*(4000000/4000.0)));
 "36
-[e ( __delay (1 -> * -> _retraso `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;AscendenteDescendente.c: 37: PORTB = 0x7D;
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;AscendenteDescendente.c: 37: PORTB = 0x6D;
 "37
-[e = _PORTB -> -> 125 `i `uc ]
-[; ;AscendenteDescendente.c: 38: _delay((unsigned long)((retraso)*(4000000/4000.0)));
+[e = _PORTB -> -> 109 `i `uc ]
+[; ;AscendenteDescendente.c: 38: _delay((unsigned long)((1000)*(4000000/4000.0)));
 "38
-[e ( __delay (1 -> * -> _retraso `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;AscendenteDescendente.c: 39: PORTB = 0x07;
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;AscendenteDescendente.c: 39: PORTB = 0x7D;
 "39
-[e = _PORTB -> -> 7 `i `uc ]
-[; ;AscendenteDescendente.c: 40: _delay((unsigned long)((retraso)*(4000000/4000.0)));
+[e = _PORTB -> -> 125 `i `uc ]
+[; ;AscendenteDescendente.c: 40: _delay((unsigned long)((1000)*(4000000/4000.0)));
 "40
-[e ( __delay (1 -> * -> _retraso `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;AscendenteDescendente.c: 41: PORTB = 0x7F;
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;AscendenteDescendente.c: 41: PORTB = 0x07;
 "41
-[e = _PORTB -> -> 127 `i `uc ]
-[; ;AscendenteDescendente.c: 42: _delay((unsigned long)((retraso)*(4000000/4000.0)));
+[e = _PORTB -> -> 7 `i `uc ]
+[; ;AscendenteDescendente.c: 42: _delay((unsigned long)((1000)*(4000000/4000.0)));
 "42
-[e ( __delay (1 -> * -> _retraso `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;AscendenteDescendente.c: 43: PORTB = 0x6F;
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;AscendenteDescendente.c: 43: PORTB = 0x7F;
 "43
-[e = _PORTB -> -> 111 `i `uc ]
-[; ;AscendenteDescendente.c: 44: _delay((unsigned long)((retraso)*(4000000/4000.0)));
+[e = _PORTB -> -> 127 `i `uc ]
+[; ;AscendenteDescendente.c: 44: _delay((unsigned long)((1000)*(4000000/4000.0)));
 "44
-[e ( __delay (1 -> * -> _retraso `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;AscendenteDescendente.c: 45: PORTB = 0x6F;
+"45
+[e = _PORTB -> -> 111 `i `uc ]
+[; ;AscendenteDescendente.c: 46: _delay((unsigned long)((1000)*(4000000/4000.0)));
 "46
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"47
 }
 [e :U 144 ]
-[; ;AscendenteDescendente.c: 46: }
-[; ;AscendenteDescendente.c: 48: if (PORTCbits.RC1 == 1){
+"26
+[e $ == _asciende -> 1 `i 145  ]
+[e :U 146 ]
 "48
-[e $ ! == -> . . _PORTCbits 0 1 `i -> 1 `i 145  ]
-{
-[; ;AscendenteDescendente.c: 49: PORTB = 0x6F;
-"49
-[e = _PORTB -> -> 111 `i `uc ]
-[; ;AscendenteDescendente.c: 50: _delay((unsigned long)((retraso)*(4000000/4000.0)));
-"50
-[e ( __delay (1 -> * -> _retraso `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;AscendenteDescendente.c: 51: PORTB = 0x7F;
-"51
-[e = _PORTB -> -> 127 `i `uc ]
-[; ;AscendenteDescendente.c: 52: _delay((unsigned long)((retraso)*(4000000/4000.0)));
-"52
-[e ( __delay (1 -> * -> _retraso `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;AscendenteDescendente.c: 53: PORTB = 0x07;
-"53
-[e = _PORTB -> -> 7 `i `uc ]
-[; ;AscendenteDescendente.c: 54: _delay((unsigned long)((retraso)*(4000000/4000.0)));
-"54
-[e ( __delay (1 -> * -> _retraso `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;AscendenteDescendente.c: 55: PORTB = 0x7D;
-"55
-[e = _PORTB -> -> 125 `i `uc ]
-[; ;AscendenteDescendente.c: 56: _delay((unsigned long)((retraso)*(4000000/4000.0)));
-"56
-[e ( __delay (1 -> * -> _retraso `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;AscendenteDescendente.c: 57: PORTB = 0x6D;
-"57
-[e = _PORTB -> -> 109 `i `uc ]
-[; ;AscendenteDescendente.c: 58: _delay((unsigned long)((retraso)*(4000000/4000.0)));
-"58
-[e ( __delay (1 -> * -> _retraso `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;AscendenteDescendente.c: 59: PORTB = 0x66;
-"59
-[e = _PORTB -> -> 102 `i `uc ]
-[; ;AscendenteDescendente.c: 60: _delay((unsigned long)((retraso)*(4000000/4000.0)));
-"60
-[e ( __delay (1 -> * -> _retraso `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;AscendenteDescendente.c: 61: PORTB = 0x4F;
-"61
-[e = _PORTB -> -> 79 `i `uc ]
-[; ;AscendenteDescendente.c: 62: _delay((unsigned long)((retraso)*(4000000/4000.0)));
-"62
-[e ( __delay (1 -> * -> _retraso `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;AscendenteDescendente.c: 63: PORTB = 0x5B;
-"63
-[e = _PORTB -> -> 91 `i `uc ]
-[; ;AscendenteDescendente.c: 64: _delay((unsigned long)((retraso)*(4000000/4000.0)));
-"64
-[e ( __delay (1 -> * -> _retraso `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;AscendenteDescendente.c: 65: PORTB = 0x06;
-"65
-[e = _PORTB -> -> 6 `i `uc ]
-[; ;AscendenteDescendente.c: 66: _delay((unsigned long)((retraso)*(4000000/4000.0)));
-"66
-[e ( __delay (1 -> * -> _retraso `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;AscendenteDescendente.c: 67: PORTB = 0x3F;
-"67
-[e = _PORTB -> -> 63 `i `uc ]
-[; ;AscendenteDescendente.c: 68: _delay((unsigned long)((retraso)*(4000000/4000.0)));
-"68
-[e ( __delay (1 -> * -> _retraso `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"69
 }
-[e :U 145 ]
+[e :U 143 ]
+[; ;AscendenteDescendente.c: 47: }
+[; ;AscendenteDescendente.c: 48: }
+[; ;AscendenteDescendente.c: 50: if (PORTCbits.RC1 == 1){
+"50
+[e $ ! == -> . . _PORTCbits 0 1 `i -> 1 `i 147  ]
+{
+[; ;AscendenteDescendente.c: 51: desciende =1;
+"51
+[e = _desciende -> 1 `i ]
+[; ;AscendenteDescendente.c: 52: while (desciende == 1) {
+"52
+[e $U 148  ]
+[e :U 149 ]
+{
+[; ;AscendenteDescendente.c: 53: PORTB = 0x6F;
+"53
+[e = _PORTB -> -> 111 `i `uc ]
+[; ;AscendenteDescendente.c: 54: _delay((unsigned long)((1000)*(4000000/4000.0)));
+"54
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;AscendenteDescendente.c: 55: PORTB = 0x7F;
+"55
+[e = _PORTB -> -> 127 `i `uc ]
+[; ;AscendenteDescendente.c: 56: _delay((unsigned long)((1000)*(4000000/4000.0)));
+"56
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;AscendenteDescendente.c: 57: PORTB = 0x07;
+"57
+[e = _PORTB -> -> 7 `i `uc ]
+[; ;AscendenteDescendente.c: 58: _delay((unsigned long)((1000)*(4000000/4000.0)));
+"58
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;AscendenteDescendente.c: 59: PORTB = 0x7D;
+"59
+[e = _PORTB -> -> 125 `i `uc ]
+[; ;AscendenteDescendente.c: 60: _delay((unsigned long)((1000)*(4000000/4000.0)));
+"60
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;AscendenteDescendente.c: 61: PORTB = 0x6D;
+"61
+[e = _PORTB -> -> 109 `i `uc ]
+[; ;AscendenteDescendente.c: 62: _delay((unsigned long)((1000)*(4000000/4000.0)));
+"62
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;AscendenteDescendente.c: 63: PORTB = 0x66;
+"63
+[e = _PORTB -> -> 102 `i `uc ]
+[; ;AscendenteDescendente.c: 64: _delay((unsigned long)((1000)*(4000000/4000.0)));
+"64
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;AscendenteDescendente.c: 65: PORTB = 0x4F;
+"65
+[e = _PORTB -> -> 79 `i `uc ]
+[; ;AscendenteDescendente.c: 66: _delay((unsigned long)((1000)*(4000000/4000.0)));
+"66
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;AscendenteDescendente.c: 67: PORTB = 0x5B;
+"67
+[e = _PORTB -> -> 91 `i `uc ]
+[; ;AscendenteDescendente.c: 68: _delay((unsigned long)((1000)*(4000000/4000.0)));
+"68
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;AscendenteDescendente.c: 69: PORTB = 0x06;
+"69
+[e = _PORTB -> -> 6 `i `uc ]
+[; ;AscendenteDescendente.c: 70: _delay((unsigned long)((1000)*(4000000/4000.0)));
 "70
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;AscendenteDescendente.c: 71: PORTB = 0x3F;
+"71
+[e = _PORTB -> -> 63 `i `uc ]
+[; ;AscendenteDescendente.c: 72: _delay((unsigned long)((1000)*(4000000/4000.0)));
+"72
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"73
+}
+[e :U 148 ]
+"52
+[e $ == _desciende -> 1 `i 149  ]
+[e :U 150 ]
+"74
+}
+[e :U 147 ]
+"75
 }
 [e :U 140 ]
-"18
+"22
 [e $U 141  ]
 [e :U 142 ]
-[; ;AscendenteDescendente.c: 69: }
-[; ;AscendenteDescendente.c: 70: }
-[; ;AscendenteDescendente.c: 71: }
-"71
+[; ;AscendenteDescendente.c: 73: }
+[; ;AscendenteDescendente.c: 74: }
+[; ;AscendenteDescendente.c: 75: }
+[; ;AscendenteDescendente.c: 76: }
+"76
 [e :UE 139 ]
 }

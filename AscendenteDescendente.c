@@ -7,68 +7,77 @@
 #include <xc.h>
 #include <stdio.h>
 #include "config.h"
-const int retraso = 5000;
+#define retraso 1000
 
+int bandera = 0;
+int estadoAnteriorIncremento, estadoAnteroriDecremento;
+void tabla(int num);
 void main(void) {
     
     TRISB = 0;
     PORTB = 0;
     TRISC = 1;
     PORTC = 0;
+    int contador=0;
     while (1) {
-        
-    if (PORTCbits.RC1 == 0 && PORTCbits.RC2 ==0){
-        PORTB = 0x00;            
-    }        
-
-    if (PORTCbits.RC2 == 1){        //Empieza a incrementar el Display 7 Segmentos
-        PORTB = 0x3F; //NUMERO 0
-        __delay_ms(retraso);        
-        PORTB = 0x06; //NUMERO 1        
+        if(PORTCbits.RC1 == 1)
+            bandera = 1;
+        if(PORTCbits.RC2 == 1)
+            bandera = 2;
+        tabla(contador);
         __delay_ms(retraso);
-        PORTB = 0x5B; //NUMERO 2
-        __delay_ms(retraso);
-        PORTB = 0x4F; //NUMERO 3
-        __delay_ms(retraso);
-        PORTB = 0x66; //NUMERO 4
-        __delay_ms(retraso);
-        PORTB = 0x6D; //NUMERO 5
-        __delay_ms(retraso);
-        PORTB = 0x7D; //NUMERO 6
-        __delay_ms(retraso);
-        PORTB = 0x07; //NUMERO 7
-        __delay_ms(retraso);
-        PORTB = 0x7F; //NUMERO 8
-        __delay_ms(retraso);
-        PORTB = 0x6F; //NUMERO 9
-        __delay_ms(retraso);
+        if(bandera==1)
+            contador++;
+        else if(bandera==2)
+            contador--;
+        if(contador==10&&bandera==1)
+            contador=0;
+        if(contador==-1&&bandera==2)
+            contador=9; 
         
     }
-    
-    if (PORTCbits.RC1 == 1){        
-        PORTB = 0x6F; //NUMERO 9
-        __delay_ms(retraso);
-        PORTB = 0x7F; //NUMERO 8
-        __delay_ms(retraso);
-        PORTB = 0x07; //NUMERO 7
-        __delay_ms(retraso);
-        PORTB = 0x7D; //NUMERO 6
-        __delay_ms(retraso);
-        PORTB = 0x6D; //NUMERO 5
-        __delay_ms(retraso);
-        PORTB = 0x66; //NUMERO 4
-        __delay_ms(retraso);
-        PORTB = 0x4F; //NUMERO 3
-        __delay_ms(retraso);
-        PORTB = 0x5B; //NUMERO 2
-        __delay_ms(retraso);
-        PORTB = 0x06; //NUMERO 1
-        __delay_ms(retraso);
-        PORTB = 0x3F; //NUMERO 0
-        __delay_ms(retraso);        
-    }    
-   }
+        
+        
 }
+
+
+
+void tabla(int num){
+        int aux = num;
+        switch(aux)
+        {
+           case 0:
+           PORTB = 0x3F; //NUMERO 0    
+           break;
+           case 1:
+           PORTB = 0x06;//NUMERO 1        
+           break;
+           case 2:
+           PORTB = 0x5B; //NUMERO 2
+           break;
+           case 3:
+        PORTB = 0x4F; //NUMERO 3
+            break;
+            case 4:
+        PORTB = 0x66; //NUMERO 4
+        break;
+        case 5: 
+        PORTB = 0x6D; //NUMERO 5
+        break;
+            case 6:        
+        PORTB = 0x7D; //NUMERO 6
+        break;
+            case 7:
+        PORTB = 0x07; //NUMERO 7
+        break;
+            case 8:
+        PORTB = 0x7F; //NUMERO 8
+        break;
+            case 9:
+        PORTB = 0x6F; //NUMERO 9
+        break;
+        }
+    }
 /*
  * Catodo             Anodo
  * 0= 0x3F              0xC0

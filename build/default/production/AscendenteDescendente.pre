@@ -2194,64 +2194,74 @@ extern int printf(const char *, ...);
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
 
-# 10 "AscendenteDescendente.c"
-const int retraso = 50000;
-int i;
-
+# 12 "AscendenteDescendente.c"
+int bandera = 0;
+int estadoAnteriorIncremento, estadoAnteroriDecremento;
+void tabla(int num);
 void main(void) {
 
 TRISB = 0;
 PORTB = 0;
-TRISC = 0;
-PORTC = 1;
+TRISC = 1;
+PORTC = 0;
+int contador=0;
 while (1) {
-PORTB = 0x00;
+if(PORTCbits.RC1 == 1)
+bandera = 1;
+if(PORTCbits.RC2 == 1)
+bandera = 2;
+tabla(contador);
+_delay((unsigned long)((1000)*(4000000/4000.0)));
+if(bandera==1)
+contador++;
+else if(bandera==2)
+contador--;
+if(contador==10&&bandera==1)
+contador=0;
+if(contador==-1&&bandera==2)
+contador=9;
 
-if (PORTCbits.RC0 == 1){
-PORTB = 0x3F;
-_delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0x06;
-_delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0x5B;
-_delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0x4F;
-_delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0x66;
-_delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0x6D;
-_delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0x7D;
-_delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0x07;
-_delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0x7F;
-_delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0x6F;
-_delay((unsigned long)((retraso)*(4000000/4000.0)));
 }
 
-if (PORTCbits.RC1 == 1){
-PORTB = 0x6F;
-_delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0x7F;
-_delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0x07;
-_delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0x7D;
-_delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0x6D;
-_delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0x66;
-_delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0x4F;
-_delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0x5B;
-_delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0x06;
-_delay((unsigned long)((retraso)*(4000000/4000.0)));
-PORTB = 0x3F;
-_delay((unsigned long)((retraso)*(4000000/4000.0)));
+
 }
+
+
+
+void tabla(int num){
+int aux = num;
+switch(aux)
+{
+case 0:
+PORTB = 0x3F;
+break;
+case 1:
+PORTB = 0x06;
+break;
+case 2:
+PORTB = 0x5B;
+break;
+case 3:
+PORTB = 0x4F;
+break;
+case 4:
+PORTB = 0x66;
+break;
+case 5:
+PORTB = 0x6D;
+break;
+case 6:
+PORTB = 0x7D;
+break;
+case 7:
+PORTB = 0x07;
+break;
+case 8:
+PORTB = 0x7F;
+break;
+case 9:
+PORTB = 0x6F;
+break;
 }
 }
 
