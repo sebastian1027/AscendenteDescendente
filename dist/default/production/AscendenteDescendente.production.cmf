@@ -12,13 +12,12 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production\AscendenteDescendente.production.obj
-cinit CODE 0 7F4 7F4 C 2
-text1 CODE 0 734 734 5D 2
-maintext CODE 0 791 791 63 2
+cinit CODE 0 7FA 7FA 6 2
+text1 CODE 0 73A 73A 5D 2
+maintext CODE 0 797 797 63 2
 cstackCOMMON COMMON 1 70 70 9 1
-bssBANK0 BANK0 1 20 20 2 1
-bssCOMMON COMMON 1 79 79 4 1
-$C:\Users\sebas\AppData\Local\Temp\s2u0.obj
+bssCOMMON COMMON 1 79 79 2 1
+$C:\Users\sebas\AppData\Local\Temp\s270.obj
 end_init CODE 0 0 0 3 2
 config CONFIG 0 2007 2007 2 2
 # %UNUSED Section
@@ -27,31 +26,31 @@ config CONFIG 0 2007 2007 2 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 22-6F 1
+RAM 20-6F 1
 RAM A0-EF 1
 RAM 110-16F 1
 RAM 190-1EF 1
-BANK0 22-6F 1
+BANK0 20-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
-CONST 3-733 2
+CONST 3-739 2
 CONST 800-1FFF 2
-ENTRY 3-733 2
+ENTRY 3-739 2
 ENTRY 800-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
-CODE 3-733 2
+CODE 3-739 2
 CODE 800-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
-COMMON 7D-7D 1
+COMMON 7B-7D 1
 EEDATA 2100-21FF 2
-STRCODE 3-733 2
+STRCODE 3-739 2
 STRCODE 800-1FFF 2
-STRING 3-733 2
+STRING 3-739 2
 STRING 800-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -67,65 +66,59 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\AscendenteDescendente.production.obj
-7F4 cinit CODE >223:C:\Users\sebas\AppData\Local\Temp\s2u0.
-7F4 cinit CODE >226:C:\Users\sebas\AppData\Local\Temp\s2u0.
-7F4 cinit CODE >246:C:\Users\sebas\AppData\Local\Temp\s2u0.
-7F5 cinit CODE >247:C:\Users\sebas\AppData\Local\Temp\s2u0.
-7F6 cinit CODE >248:C:\Users\sebas\AppData\Local\Temp\s2u0.
-7F7 cinit CODE >249:C:\Users\sebas\AppData\Local\Temp\s2u0.
-7F8 cinit CODE >252:C:\Users\sebas\AppData\Local\Temp\s2u0.
-7F9 cinit CODE >253:C:\Users\sebas\AppData\Local\Temp\s2u0.
-7FA cinit CODE >254:C:\Users\sebas\AppData\Local\Temp\s2u0.
-7FB cinit CODE >255:C:\Users\sebas\AppData\Local\Temp\s2u0.
-7FC cinit CODE >261:C:\Users\sebas\AppData\Local\Temp\s2u0.
-7FC cinit CODE >263:C:\Users\sebas\AppData\Local\Temp\s2u0.
-7FD cinit CODE >264:C:\Users\sebas\AppData\Local\Temp\s2u0.
-734 text1 CODE >45:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-734 text1 CODE >46:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-738 text1 CODE >47:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-739 text1 CODE >50:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-73D text1 CODE >51:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-73E text1 CODE >53:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-742 text1 CODE >54:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-743 text1 CODE >56:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-747 text1 CODE >57:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-748 text1 CODE >59:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-74C text1 CODE >60:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-74D text1 CODE >62:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-751 text1 CODE >63:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-752 text1 CODE >65:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-756 text1 CODE >66:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-757 text1 CODE >68:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-75B text1 CODE >69:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-75C text1 CODE >71:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-760 text1 CODE >72:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-761 text1 CODE >74:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-765 text1 CODE >75:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-766 text1 CODE >77:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-76A text1 CODE >79:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-76B text1 CODE >47:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-790 text1 CODE >80:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-791 maintext CODE >15:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-791 maintext CODE >17:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-794 maintext CODE >18:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-797 maintext CODE >19:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-79B maintext CODE >20:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-79E maintext CODE >21:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-7A0 maintext CODE >23:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-7A4 maintext CODE >24:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-7A8 maintext CODE >25:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-7AA maintext CODE >26:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-7AE maintext CODE >27:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-7B7 maintext CODE >28:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-7C4 maintext CODE >29:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-7C8 maintext CODE >30:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-7CE maintext CODE >31:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-7D3 maintext CODE >32:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-7D9 maintext CODE >33:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-7E2 maintext CODE >34:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-7E4 maintext CODE >35:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-7EF maintext CODE >36:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
-7F3 maintext CODE >22:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+7FA cinit CODE >223:C:\Users\sebas\AppData\Local\Temp\s270.
+7FA cinit CODE >226:C:\Users\sebas\AppData\Local\Temp\s270.
+7FA cinit CODE >237:C:\Users\sebas\AppData\Local\Temp\s270.
+7FB cinit CODE >238:C:\Users\sebas\AppData\Local\Temp\s270.
+7FC cinit CODE >244:C:\Users\sebas\AppData\Local\Temp\s270.
+7FC cinit CODE >246:C:\Users\sebas\AppData\Local\Temp\s270.
+7FD cinit CODE >247:C:\Users\sebas\AppData\Local\Temp\s270.
+73A text1 CODE >45:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+73A text1 CODE >46:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+73E text1 CODE >48:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+73F text1 CODE >51:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+743 text1 CODE >52:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+744 text1 CODE >54:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+748 text1 CODE >55:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+749 text1 CODE >57:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+74D text1 CODE >58:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+74E text1 CODE >60:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+752 text1 CODE >61:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+753 text1 CODE >63:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+757 text1 CODE >64:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+758 text1 CODE >66:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+75C text1 CODE >67:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+75D text1 CODE >69:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+761 text1 CODE >70:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+762 text1 CODE >72:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+766 text1 CODE >73:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+767 text1 CODE >75:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+76B text1 CODE >76:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+76C text1 CODE >78:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+770 text1 CODE >80:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+771 text1 CODE >48:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+796 text1 CODE >81:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+797 maintext CODE >15:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+797 maintext CODE >17:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+79A maintext CODE >18:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+79D maintext CODE >19:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+7A1 maintext CODE >20:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+7A4 maintext CODE >21:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+7A6 maintext CODE >23:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+7AA maintext CODE >24:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+7AE maintext CODE >25:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+7B0 maintext CODE >26:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+7B4 maintext CODE >27:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+7BD maintext CODE >28:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+7CA maintext CODE >29:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+7CE maintext CODE >30:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+7D4 maintext CODE >31:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+7D9 maintext CODE >32:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+7DF maintext CODE >33:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+7E8 maintext CODE >34:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+7EA maintext CODE >35:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+7F5 maintext CODE >36:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
+7F9 maintext CODE >22:E:\DigitalesII\AscendenteDescendente\AscendenteDescendente.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -140,28 +133,28 @@ $dist/default/production\AscendenteDescendente.production.obj
 %SYMTAB
 ___latbits 2 0 ABS 0 - dist/default/production\AscendenteDescendente.production.obj
 __Hspace_0 2009 0 ABS 0 - -
-__Hspace_1 7D 0 ABS 0 - -
+__Hspace_1 7B 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\AscendenteDescendente.production.obj
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\AscendenteDescendente.production.obj
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\sebas\AppData\Local\Temp\s2u0.obj
-_main F22 0 CODE 0 maintext dist/default/production\AscendenteDescendente.production.obj
+___sp 0 0 STACK 2 stack C:\Users\sebas\AppData\Local\Temp\s270.obj
+_main F2E 0 CODE 0 maintext dist/default/production\AscendenteDescendente.production.obj
 btemp 7E 0 ABS 0 - dist/default/production\AscendenteDescendente.production.obj
-start 0 0 CODE 0 init C:\Users\sebas\AppData\Local\Temp\s2u0.obj
+start 0 0 CODE 0 init C:\Users\sebas\AppData\Local\Temp\s270.obj
 __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\AscendenteDescendente.production.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\AscendenteDescendente.production.obj
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 main@contador 77 0 COMMON 1 cstackCOMMON dist/default/production\AscendenteDescendente.production.obj
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\sebas\AppData\Local\Temp\s2u0.obj
-intlevel1 0 0 ENTRY 0 functab C:\Users\sebas\AppData\Local\Temp\s2u0.obj
-intlevel2 0 0 ENTRY 0 functab C:\Users\sebas\AppData\Local\Temp\s2u0.obj
-intlevel3 0 0 ENTRY 0 functab C:\Users\sebas\AppData\Local\Temp\s2u0.obj
-intlevel4 0 0 ENTRY 0 functab C:\Users\sebas\AppData\Local\Temp\s2u0.obj
-intlevel5 0 0 ENTRY 0 functab C:\Users\sebas\AppData\Local\Temp\s2u0.obj
+intlevel0 0 0 ENTRY 0 functab C:\Users\sebas\AppData\Local\Temp\s270.obj
+intlevel1 0 0 ENTRY 0 functab C:\Users\sebas\AppData\Local\Temp\s270.obj
+intlevel2 0 0 ENTRY 0 functab C:\Users\sebas\AppData\Local\Temp\s270.obj
+intlevel3 0 0 ENTRY 0 functab C:\Users\sebas\AppData\Local\Temp\s270.obj
+intlevel4 0 0 ENTRY 0 functab C:\Users\sebas\AppData\Local\Temp\s270.obj
+intlevel5 0 0 ENTRY 0 functab C:\Users\sebas\AppData\Local\Temp\s270.obj
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/production\AscendenteDescendente.production.obj
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -169,8 +162,8 @@ __Hclrtext 0 0 ABS 0 clrtext -
 __Lmaintext 0 0 ABS 0 maintext -
 __size_of_tabla 0 0 ABS 0 - dist/default/production\AscendenteDescendente.production.obj
 __CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\AscendenteDescendente.production.obj
-start_initialization FE8 0 CODE 0 cinit dist/default/production\AscendenteDescendente.production.obj
-___int_sp 0 0 STACK 2 stack C:\Users\sebas\AppData\Local\Temp\s2u0.obj
+start_initialization FF4 0 CODE 0 cinit dist/default/production\AscendenteDescendente.production.obj
+___int_sp 0 0 STACK 2 stack C:\Users\sebas\AppData\Local\Temp\s270.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -185,7 +178,7 @@ __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
 __Lbank3 0 0 ABS 0 bank3 -
-__Lcinit FE8 0 CODE 0 cinit -
+__Lcinit FF4 0 CODE 0 cinit -
 __Lidloc 0 0 IDLOC 0 idloc -
 __Lstack 0 0 STACK 2 stack -
 _PORTCbits 7 0 ABS 0 - dist/default/production\AscendenteDescendente.production.obj
@@ -207,21 +200,20 @@ __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __S0 2009 0 ABS 0 - -
-__S1 7D 0 ABS 0 - -
+__S1 7B 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __CFG_BOR4V$BOR40V 0 0 ABS 0 - dist/default/production\AscendenteDescendente.production.obj
 __CFG_FOSC$INTRC_NOCLKOUT 0 0 ABS 0 - dist/default/production\AscendenteDescendente.production.obj
-_bandera 7B 0 COMMON 1 bssCOMMON dist/default/production\AscendenteDescendente.production.obj
+_bandera 79 0 COMMON 1 bssCOMMON dist/default/production\AscendenteDescendente.production.obj
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\sebas\AppData\Local\Temp\s2u0.obj
-__LbssBANK0 0 0 ABS 0 bssBANK0 -
-__pmaintext F22 0 CODE 0 maintext dist/default/production\AscendenteDescendente.production.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\sebas\AppData\Local\Temp\s270.obj
+__pmaintext F2E 0 CODE 0 maintext dist/default/production\AscendenteDescendente.production.obj
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 400E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production\AscendenteDescendente.production.obj
-stackhi 0 0 ABS 0 - C:\Users\sebas\AppData\Local\Temp\s2u0.obj
-stacklo 0 0 ABS 0 - C:\Users\sebas\AppData\Local\Temp\s2u0.obj
+stackhi 0 0 ABS 0 - C:\Users\sebas\AppData\Local\Temp\s270.obj
+stacklo 0 0 ABS 0 - C:\Users\sebas\AppData\Local\Temp\s270.obj
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\AscendenteDescendente.production.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
@@ -236,8 +228,7 @@ end_of_initialization FF8 0 CODE 0 cinit dist/default/production\AscendenteDesce
 __Hintentry 0 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 0 0 CODE 0 reset_vec -
-__HbssBANK0 0 0 ABS 0 bssBANK0 -
-__ptext1 E68 0 CODE 0 text1 dist/default/production\AscendenteDescendente.production.obj
+__ptext1 E74 0 CODE 0 text1 dist/default/production\AscendenteDescendente.production.obj
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
@@ -247,19 +238,18 @@ __Lfunctab 0 0 ENTRY 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\AscendenteDescendente.production.obj
 __Hend_init 6 0 CODE 0 end_init -
-__end_of_main FE8 0 CODE 0 maintext dist/default/production\AscendenteDescendente.production.obj
+__end_of_main FF4 0 CODE 0 maintext dist/default/production\AscendenteDescendente.production.obj
 _PORTB 6 0 ABS 0 - dist/default/production\AscendenteDescendente.production.obj
 _PORTC 7 0 ABS 0 - dist/default/production\AscendenteDescendente.production.obj
 _TRISB 86 0 ABS 0 - dist/default/production\AscendenteDescendente.production.obj
 _TRISC 87 0 ABS 0 - dist/default/production\AscendenteDescendente.production.obj
-__end_of_tabla F22 0 CODE 0 text1 dist/default/production\AscendenteDescendente.production.obj
+__end_of_tabla F2E 0 CODE 0 text1 dist/default/production\AscendenteDescendente.production.obj
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 __CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\AscendenteDescendente.production.obj
-_tabla E68 0 CODE 0 text1 dist/default/production\AscendenteDescendente.production.obj
-__initialization FE8 0 CODE 0 cinit dist/default/production\AscendenteDescendente.production.obj
+_tabla E74 0 CODE 0 text1 dist/default/production\AscendenteDescendente.production.obj
+__initialization FF4 0 CODE 0 cinit dist/default/production\AscendenteDescendente.production.obj
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\AscendenteDescendente.production.obj
-__pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production\AscendenteDescendente.production.obj
 __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\AscendenteDescendente.production.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
@@ -286,10 +276,9 @@ __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\AscendenteDescendente.producti
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cinit 0 7F4 FE8 C 2
-text1 0 734 E68 5D 2
-maintext 0 791 F22 63 2
-cstackCOMMON 1 70 70 D 1
+cinit 0 7FA FF4 6 2
+text1 0 73A E74 5D 2
+maintext 0 797 F2E 63 2
+cstackCOMMON 1 70 70 B 1
 reset_vec 0 0 0 3 2
-bssBANK0 1 20 20 2 1
 config 0 2007 400E 2 2

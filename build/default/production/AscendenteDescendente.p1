@@ -1560,16 +1560,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x BOR4V=BOR40V ]
 "23
 [p x WRT=OFF ]
-"12 AscendenteDescendente.c
+"13 AscendenteDescendente.c
 [v _bandera `i ~T0 @X0 1 e ]
 [i _bandera
 -> 0 `i
 ]
-[; ;AscendenteDescendente.c: 12: int bandera = 0;
-"13
-[v _estadoAnteriorIncremento `i ~T0 @X0 1 e ]
-[v _estadoAnteroriDecremento `i ~T0 @X0 1 e ]
-[; ;AscendenteDescendente.c: 13: int estadoAnteriorIncremento, estadoAnteroriDecremento;
+[; ;AscendenteDescendente.c: 13: int bandera = 0;
 [; ;AscendenteDescendente.c: 14: void tabla(int num);
 [v $root$_main `(v ~T0 @X0 0 e ]
 "15
@@ -1615,9 +1611,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;AscendenteDescendente.c: 27: tabla(contador);
 "27
 [e ( _tabla (1 _contador ]
-[; ;AscendenteDescendente.c: 28: _delay((unsigned long)((1000)*(4000000/4000.0)));
+[; ;AscendenteDescendente.c: 28: _delay((unsigned long)((500)*(4000000/4000.0)));
 "28
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 [; ;AscendenteDescendente.c: 29: if(bandera==1)
 "29
 [e $ ! == _bandera -> 1 `i 145  ]
@@ -1670,107 +1666,107 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _aux `i ~T0 @X0 1 a ]
 [; ;AscendenteDescendente.c: 46: int aux = num;
 [e = _aux _num ]
-[; ;AscendenteDescendente.c: 47: switch(aux)
-"47
-[e $U 152  ]
-[; ;AscendenteDescendente.c: 48: {
+[; ;AscendenteDescendente.c: 48: switch(aux)
 "48
-{
-[; ;AscendenteDescendente.c: 49: case 0:
+[e $U 152  ]
+[; ;AscendenteDescendente.c: 49: {
 "49
-[e :U 153 ]
-[; ;AscendenteDescendente.c: 50: PORTB = 0x3F;
+{
+[; ;AscendenteDescendente.c: 50: case 0:
 "50
-[e = _PORTB -> -> 63 `i `uc ]
-[; ;AscendenteDescendente.c: 51: break;
+[e :U 153 ]
+[; ;AscendenteDescendente.c: 51: PORTB = 0x3F;
 "51
-[e $U 151  ]
-[; ;AscendenteDescendente.c: 52: case 1:
+[e = _PORTB -> -> 63 `i `uc ]
+[; ;AscendenteDescendente.c: 52: break;
 "52
-[e :U 154 ]
-[; ;AscendenteDescendente.c: 53: PORTB = 0x06;
+[e $U 151  ]
+[; ;AscendenteDescendente.c: 53: case 1:
 "53
-[e = _PORTB -> -> 6 `i `uc ]
-[; ;AscendenteDescendente.c: 54: break;
+[e :U 154 ]
+[; ;AscendenteDescendente.c: 54: PORTB = 0x06;
 "54
-[e $U 151  ]
-[; ;AscendenteDescendente.c: 55: case 2:
+[e = _PORTB -> -> 6 `i `uc ]
+[; ;AscendenteDescendente.c: 55: break;
 "55
-[e :U 155 ]
-[; ;AscendenteDescendente.c: 56: PORTB = 0x5B;
+[e $U 151  ]
+[; ;AscendenteDescendente.c: 56: case 2:
 "56
-[e = _PORTB -> -> 91 `i `uc ]
-[; ;AscendenteDescendente.c: 57: break;
+[e :U 155 ]
+[; ;AscendenteDescendente.c: 57: PORTB = 0x5B;
 "57
-[e $U 151  ]
-[; ;AscendenteDescendente.c: 58: case 3:
+[e = _PORTB -> -> 91 `i `uc ]
+[; ;AscendenteDescendente.c: 58: break;
 "58
-[e :U 156 ]
-[; ;AscendenteDescendente.c: 59: PORTB = 0x4F;
+[e $U 151  ]
+[; ;AscendenteDescendente.c: 59: case 3:
 "59
-[e = _PORTB -> -> 79 `i `uc ]
-[; ;AscendenteDescendente.c: 60: break;
+[e :U 156 ]
+[; ;AscendenteDescendente.c: 60: PORTB = 0x4F;
 "60
-[e $U 151  ]
-[; ;AscendenteDescendente.c: 61: case 4:
+[e = _PORTB -> -> 79 `i `uc ]
+[; ;AscendenteDescendente.c: 61: break;
 "61
-[e :U 157 ]
-[; ;AscendenteDescendente.c: 62: PORTB = 0x66;
+[e $U 151  ]
+[; ;AscendenteDescendente.c: 62: case 4:
 "62
-[e = _PORTB -> -> 102 `i `uc ]
-[; ;AscendenteDescendente.c: 63: break;
+[e :U 157 ]
+[; ;AscendenteDescendente.c: 63: PORTB = 0x66;
 "63
-[e $U 151  ]
-[; ;AscendenteDescendente.c: 64: case 5:
+[e = _PORTB -> -> 102 `i `uc ]
+[; ;AscendenteDescendente.c: 64: break;
 "64
-[e :U 158 ]
-[; ;AscendenteDescendente.c: 65: PORTB = 0x6D;
+[e $U 151  ]
+[; ;AscendenteDescendente.c: 65: case 5:
 "65
-[e = _PORTB -> -> 109 `i `uc ]
-[; ;AscendenteDescendente.c: 66: break;
+[e :U 158 ]
+[; ;AscendenteDescendente.c: 66: PORTB = 0x6D;
 "66
-[e $U 151  ]
-[; ;AscendenteDescendente.c: 67: case 6:
+[e = _PORTB -> -> 109 `i `uc ]
+[; ;AscendenteDescendente.c: 67: break;
 "67
-[e :U 159 ]
-[; ;AscendenteDescendente.c: 68: PORTB = 0x7D;
+[e $U 151  ]
+[; ;AscendenteDescendente.c: 68: case 6:
 "68
-[e = _PORTB -> -> 125 `i `uc ]
-[; ;AscendenteDescendente.c: 69: break;
+[e :U 159 ]
+[; ;AscendenteDescendente.c: 69: PORTB = 0x7D;
 "69
-[e $U 151  ]
-[; ;AscendenteDescendente.c: 70: case 7:
+[e = _PORTB -> -> 125 `i `uc ]
+[; ;AscendenteDescendente.c: 70: break;
 "70
-[e :U 160 ]
-[; ;AscendenteDescendente.c: 71: PORTB = 0x07;
+[e $U 151  ]
+[; ;AscendenteDescendente.c: 71: case 7:
 "71
-[e = _PORTB -> -> 7 `i `uc ]
-[; ;AscendenteDescendente.c: 72: break;
+[e :U 160 ]
+[; ;AscendenteDescendente.c: 72: PORTB = 0x07;
 "72
-[e $U 151  ]
-[; ;AscendenteDescendente.c: 73: case 8:
+[e = _PORTB -> -> 7 `i `uc ]
+[; ;AscendenteDescendente.c: 73: break;
 "73
-[e :U 161 ]
-[; ;AscendenteDescendente.c: 74: PORTB = 0x7F;
+[e $U 151  ]
+[; ;AscendenteDescendente.c: 74: case 8:
 "74
-[e = _PORTB -> -> 127 `i `uc ]
-[; ;AscendenteDescendente.c: 75: break;
+[e :U 161 ]
+[; ;AscendenteDescendente.c: 75: PORTB = 0x7F;
 "75
-[e $U 151  ]
-[; ;AscendenteDescendente.c: 76: case 9:
+[e = _PORTB -> -> 127 `i `uc ]
+[; ;AscendenteDescendente.c: 76: break;
 "76
-[e :U 162 ]
-[; ;AscendenteDescendente.c: 77: PORTB = 0x6F;
+[e $U 151  ]
+[; ;AscendenteDescendente.c: 77: case 9:
 "77
-[e = _PORTB -> -> 111 `i `uc ]
-[; ;AscendenteDescendente.c: 78: break;
+[e :U 162 ]
+[; ;AscendenteDescendente.c: 78: PORTB = 0x6F;
 "78
-[e $U 151  ]
+[e = _PORTB -> -> 111 `i `uc ]
+[; ;AscendenteDescendente.c: 79: break;
 "79
-}
-[; ;AscendenteDescendente.c: 79: }
 [e $U 151  ]
-"47
+"80
+}
+[; ;AscendenteDescendente.c: 80: }
+[e $U 151  ]
+"48
 [e :U 152 ]
 [e [\ _aux , $ -> 0 `i 153
  , $ -> 1 `i 154
@@ -1783,9 +1779,9 @@ Version 3.2 HI-TECH Software Intermediate Code
  , $ -> 8 `i 161
  , $ -> 9 `i 162
  151 ]
-"79
-[e :U 151 ]
-[; ;AscendenteDescendente.c: 80: }
 "80
+[e :U 151 ]
+[; ;AscendenteDescendente.c: 81: }
+"81
 [e :UE 150 ]
 }
